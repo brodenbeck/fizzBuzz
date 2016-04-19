@@ -1,15 +1,15 @@
-for (var counter = 1; counter < 1001; counter++) {
-	if (counter % 3 === 0 && counter % 5 === 0) {
-		console.log("FizzBuzz");
-	}
-	else if (counter % 3 === 0) {
-		console.log("Fizz");
-	}
-	else if (counter % 5 === 0) {
-		console.log("Buzz")
-	}
-	else {
-		console.log(counter);
-	}
-}
+var result = "";
 
+for (var counter = 1; counter < 1001; counter++) {
+	if (counter % 3 === 0) {
+		result += "Fizz";
+	}
+	if (counter % 5 === 0) {
+		result += "Buzz";
+	} 
+	if (result === "") {
+		result = counter;
+	}
+	console.log(result);
+	result = "";
+}
